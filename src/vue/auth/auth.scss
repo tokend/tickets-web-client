@@ -1,0 +1,146 @@
+@import '~@scss/variables';
+@import '~@scss/mixins';
+
+.auth-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.auth-page__titles,
+.auth-page__form {
+  width: 50%;
+}
+
+.auth-page__titles {
+  background: #94174b; /* Old browsers */
+  background: linear-gradient(#1b7da7 0%, #081940 65%);
+  padding: 0 110px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include respond-to(large) {
+    padding: 0 70px;
+  }
+
+  @include respond-to(medium) {
+    display: none;
+  }
+}
+
+.auth-page__form {
+  padding: 80px 110px;
+  position: relative;
+
+  @include respond-to(large) {
+    padding: 60px 70px;
+  }
+
+  @include respond-to(medium) {
+    width: 100%;
+    padding: 40px 16px;
+    margin: 0 auto;
+    max-width: 480px;
+  }
+}
+
+.auth-page__form-title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 24px;
+  color: $col-md-primary;
+}
+
+.auth-page__form-title--center { text-align: center; }
+
+.auth-page__form-logotype {
+  margin-bottom: 165px;
+  display: inline-block;
+
+  @include respond-to-height(950px) {
+    margin-bottom: 120px;
+  }
+
+  @include respond-to-height(750px) {
+    margin-bottom: 64px;
+  }
+}
+
+.auth-page__submit {
+  width: calc(100% + 8px);
+  display: flex;
+  margin: 48px -8px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: center;
+
+  & > button {
+    margin: 8px 0 8px 8px;
+  }
+}
+
+.auth-page__submit-btn {
+  @include button-raised();
+
+  white-space: nowrap;
+  max-width: 200px;
+  min-width: 200px;
+  flex: 1 0;
+}
+
+.auth-page__secondary-submit-btn {
+  @include button-flat();
+
+  white-space: nowrap;
+  flex: 0 0;
+}
+
+.auth-page__tips {
+  margin-right: auto;
+  color: $col-md-primary;
+  margin-bottom: 2 * $point;
+}
+
+.auth-page__tip {
+  margin-bottom: 5px;
+}
+
+.auth-page .auth-page__tip-link { // WARN: icreased weight for break vue-material styles
+  color: $col-md-primary-secondary !important;
+  text-decoration: underline;
+
+  &.auth-page__tip-link--strong {
+    font-weight: 800;
+  }
+}
+
+.auth-page__title {
+  color: $white;
+  font-size: 56px;
+  line-height: 1.2;
+
+  @include respond-to(large) {
+    font-size: 40px;
+  }
+}
+
+.auth-page__title-small {
+  font-size: 24px;
+  margin-bottom: 56px;
+  color: $white;
+
+  @include respond-to(large) {
+    font-size: 20px;
+  }
+}
+
+.auth-page__form-descr {
+  margin-bottom: 8px;
+}
+
+.auth-page__form-descr-info {
+  color: $col-md-primary;
+}
