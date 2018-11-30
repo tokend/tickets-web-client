@@ -8,7 +8,7 @@ RUN true \
  && true
 
 FROM nginx:latest
-RUN echo  $'\n\
+RUN echo  '\n\
     server {\n\
         listen 80 default_server;\n\
         root /usr/share/nginx/html;\n\
